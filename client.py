@@ -9,8 +9,13 @@ client.connect((host, 1234))
 
 # receive data sent by the server
 # 1024 is the buffer size at a time
+# encoded byte message received
 msg = client.recv(1024)
 print(msg)
+
+# decode the message from byte to unicode
+dec = msg.decode()
+print(dec)
 
 # close the socket
 client.close()
